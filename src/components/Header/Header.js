@@ -16,6 +16,11 @@ const Header = () => {
                 <Link className='me-4 text-light text-decoration-none' to={'/products'}>Products</Link>
                 <Link className='me-4 text-light text-decoration-none' to={'/orders'}>Orders</Link>
                 <Link className='me-4 text-light text-decoration-none' to={'/register'}>Register</Link>
+                {
+                    user && <>
+                        <Link className='me-4 text-light text-decoration-none' to={'/vip'}>VIP</Link>
+                    </>
+                }
                 <span className='me-2'>{user?.displayName && user.displayName}</span>
                 {
                     user?.uid
